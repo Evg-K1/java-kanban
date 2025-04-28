@@ -1,7 +1,9 @@
+package task;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class Epic extends Task{
+public class Epic extends Task {
     private List<Integer> subtaskIds;
 
     public Epic(String title, String description) {
@@ -27,7 +29,7 @@ public class Epic extends Task{
 
     @Override
     public String toString() {
-        return "Epic{" +
+        return "task.Epic{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
