@@ -65,15 +65,6 @@ public class TaskManager {
         epics.put(epic.getId(), epic);
     }
 
-    public void updateEpic(Epic epic) {
-        Epic realEpic = epics.get(epic.getId());
-        if (realEpic != null) {
-            realEpic.setTitle(epic.getTitle());
-            realEpic.setDescription(epic.getDescription());
-            updateEpicStatus(realEpic.getId());
-        }
-    }
-
     public void deleteEpicById(int id) {
         Epic epic = epics.remove(id);
         if (epic != null) {
