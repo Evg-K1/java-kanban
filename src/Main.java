@@ -1,3 +1,4 @@
+import manager.Managers;
 import manager.TaskManager;
 import task.Epic;
 import task.Status;
@@ -9,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Поехали!");
 
-        TaskManager manager = new TaskManager();
+        TaskManager manager = Managers.getDefault();
 
         Task tas1 = new Task("задача1", "задача2", Status.NEW);
         Task tas2 = new Task("приготовить обед", "помыть тарелки", Status.NEW);
@@ -91,4 +92,6 @@ public class Main {
 
         }
     }
+
+
 }
